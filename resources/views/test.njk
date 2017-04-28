@@ -1,0 +1,22 @@
+test
+<script>
+  //var URL = 'http://localhost:3333/json';
+  var URL = 'https://api.douban.com/v2/book/1220562';
+ 
+function fetchDemo() {
+    fetch(URL, {
+          mode: 'cors'
+        }
+      )
+      .then(function(response) {
+        return response.json();
+        console.log(response)
+      })
+      .then(function(json) {
+        console.log(JSON.stringify(json));
+        //console.log(json);
+     });
+}
+ 
+fetchDemo();
+</script>

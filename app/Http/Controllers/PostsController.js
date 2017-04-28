@@ -42,6 +42,10 @@ class PostsController {
     const post = yield Post.find(request.param('id'))
     yield response.sendView('posts.show', { post: post.toJSON() })
   }
+
+  * json(request, response) {
+    response.json({name: 'doe'})
+  }
 }
 
 module.exports = PostsController

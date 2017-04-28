@@ -28,3 +28,8 @@ Route.get('posts/create', 'PostsController.create')
 Route.post('posts', 'PostsController.store')
 
 Route.get('posts/:id', 'PostsController.show')
+
+Route.get('json', 'PostsController.json')
+Route.any('*', function * (request, response) {
+  yield response.sendView('test')
+})

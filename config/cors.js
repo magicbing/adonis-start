@@ -10,7 +10,7 @@ module.exports = {
   | define multiple origins as string.
   |
   */
-  origin: false,
+  origin: '*',
 
   /*
   |--------------------------------------------------------------------------
@@ -20,7 +20,7 @@ module.exports = {
   | Comma seperated HTTP methods to be allowed.
   |
   */
-  methods: 'GET, PUT, POST',
+  methods: 'GET, PUT, POST, POST, DELETE, OPTIONS',
 
   /*
   |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ module.exports = {
   | Access-Control-Request-Headers.
   |
   */
-  headers: true,
+  headers: 'X-Requested-With',
 
   /*
   |--------------------------------------------------------------------------
