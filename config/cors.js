@@ -10,7 +10,7 @@ module.exports = {
   | define multiple origins as string.
   |
   */
-  origin: '*',
+  origin: 'https://api.douban.com',
 
   /*
   |--------------------------------------------------------------------------
@@ -41,7 +41,7 @@ module.exports = {
   | Expose headers to Access-Control-Expose-Headers.
   |
   */
-  exposeHeaders: false,
+  exposeHeaders: true,
 
   /*
   |--------------------------------------------------------------------------
@@ -51,7 +51,7 @@ module.exports = {
   | Define Access-Control-Allow-Credentials header
   |
   */
-  credentials: false,
+  credentials: true,
 
   /*
   |--------------------------------------------------------------------------

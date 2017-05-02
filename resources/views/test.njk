@@ -1,22 +1,26 @@
 test
+{#<a href="https://www.baidu.com" class="nav-link">baidu</a>#}
 <script>
   //var URL = 'http://localhost:3333/json';
   var URL = 'https://api.douban.com/v2/book/1220562';
+  var URL2 = 'https://zhuanlan.zhihu.com/api/columns/zhihuadmin';
  
 function fetchDemo() {
-    fetch(URL, {
-          mode: 'cors'
-        }
-      )
-      .then(function(response) {
-        return response.json();
-        console.log(response)
+  fetch(URL2, {
+    method: 'GET', 
+    mode: 'cors', 
+    redirect: 'follow',
+    headers: new Headers({
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/x-www-form-urlencoded'
       })
-      .then(function(json) {
-        console.log(JSON.stringify(json));
-        //console.log(json);
-     });
+    })
+    .then(function(json) {
+      console.log(json)
+      /* handle response */ 
+    });
 }
  
 fetchDemo();
+
 </script>
